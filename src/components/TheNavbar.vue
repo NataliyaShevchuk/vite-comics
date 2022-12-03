@@ -126,14 +126,21 @@ nav {
         margin-left: 6rem;
         li {
             list-style: none;
-            font-size: 10px;
+            font-size: 12px;
             font-weight: 500;
         } 
         a{
             text-decoration: none;
             padding: 1rem;
+            padding-bottom: 3.2rem;
             color: $color-secondary;
+
+            &:hover{
+                border-bottom: 4px solid $hover-color;
+                color: $hover-color;
+            }
         }
+
     }
 }
 </style>

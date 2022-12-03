@@ -38,14 +38,89 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 h4{
     font-weight: 200;
     font-size: 1rem;
+    padding: 1rem;
 }
 
 .img-box{
     width: 80px;
-    padding: 1rem;
 }
+
+.pad{
+    padding: 2rem 0;
+}
+
+.col-6{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+
+    .ul-container{
+
+        ul{
+            padding-bottom: 1rem;
+            padding-right: 1rem;
+            li{
+                list-style: none;
+                margin: .5rem 0;
+    
+                a{
+                    text-decoration: none;
+                    color: $text-color;
+                }
+    
+                h2{
+                    color: white;
+                    padding-bottom: 1rem;
+                    padding-right: 2rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.img-bg-box{
+    margin: -5rem;
+}
+
+.inner-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-box-footer{
+    display: flex;
+    justify-content: center;
+    a{
+        padding: .6rem;
+    }
+}
+
+.h2-follow-us{
+    color: $color-primary;
+    padding: 0 1rem;
+}
+
+button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid $color-primary;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.social-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
