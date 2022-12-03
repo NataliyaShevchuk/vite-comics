@@ -2,6 +2,7 @@
 export default{
     data(){
         return {
+            logoImg: "dc-logo.png",
             arrayNavbar: [
                 {
                     navLink: "CHARACTERS",
@@ -74,7 +75,7 @@ export default{
     <nav class="white-bg">
         <div class="container">
             <div class="img-container">
-                <img src="" alt="">
+                <img :src="('/img/' + logoImg)" alt="logo della dc">
             </div>
 
             <ul>
@@ -95,9 +96,18 @@ export default{
 .container{
     width: 920px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px 0;
+
 }
 
-
+.img-container{
+    margin-right: 1rem;
+    text-align: center;
+    width: 60px;
+}
 img{
     display: block;
     width: 100%;
@@ -113,8 +123,11 @@ img{
 nav {
     ul {
         display: flex;
+        margin-left: 6rem;
         li {
             list-style: none;
+            font-size: 10px;
+            font-weight: 500;
         } 
         a{
             text-decoration: none;
