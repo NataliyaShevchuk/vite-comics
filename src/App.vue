@@ -21,7 +21,7 @@ export default{
     <!-- Black Banner -->
     <div class="banner-black">
       <div class="container">
-        <h2 class="my-h2"> {{textInBlackBanner}} </h2>
+        <!-- <h2 class="my-h2"> {{textInBlackBanner}} </h2> -->
       </div>
     </div>
     <!-- Blue Banner -->
@@ -206,7 +206,7 @@ export default{
     <div class="container">
       <div class="inner-container">
         <div>
-          <button>SIGN-UP NOW!</button>
+          <button type="submit">SIGN-UP NOW!</button>
         </div>
         <div class="social-container">
           <div class="h2-follow-us">
@@ -238,7 +238,11 @@ body{
   background-color: black;
   color: white;
   text-align: start;
-  height: 100px;
+  background-image: url("./img/jumbotron.jpg");
+  background-size: cover;
+  display: flex;
+  flex-grow: 1;
+  height: 500px;
 }
 
 .my-h2{
