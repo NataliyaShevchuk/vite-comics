@@ -1,13 +1,16 @@
 <script>
 
 import TheNavbar from './components/TheNavbar.vue';
+import CardComponent from  './components/CardComponent.vue';
+import dcComics from './dc-comics';
 
 export default{
-  components: { TheNavbar },
+  components: { TheNavbar, CardComponent },
 
   data(){
     return{
       textInBlackBanner: "--> Content goes here <--",
+      comicsArray: dcComics,
     }
   }
 }
@@ -24,6 +27,24 @@ export default{
         <!-- <h2 class="my-h2"> {{textInBlackBanner}} </h2> -->
       </div>
     </div>
+
+    <!-- Card Component  -->
+    <div class="card-banner">
+      <div class="container">
+        <div class="current-comics-label-container">
+          <h3 class="current-label neg-margin">CURRENT SERIES</h3>
+        </div>
+        <div class="row">
+            <div class="col-2" v-for="(OneCard, i) in comicsArray" :key="(OneCard.series + i)">
+              <CardComponent :cards="OneCard"/>
+            </div>
+        </div>
+        <div class="button-load-more" >
+          <button class="current-label">LOAD MORE</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Blue Banner -->
     <div class="banner-blue">
       <div class="container">
@@ -232,6 +253,45 @@ export default{
 body{
   font-family: $font-text;
 }
+
+.neg-margin{
+  margin: -1rem;
+}
+.card-banner{
+  background-color: $color-secondary;
+  width: 100%;
+}
+
+.current-comics-label-container{
+  display: flex;
+  justify-content: flex-start;
+}
+.current-label{
+  background-color: $color-primary;
+  color: white;
+  padding: .5rem 1rem;
+  width: 200px;
+  text-align: center;
+}
+.button-load-more{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.col-2{
+  width: 16.66666667%;
+  flex: 0 0 auto;
+}
+
+
 
 .banner-black{
   width: 100%;
